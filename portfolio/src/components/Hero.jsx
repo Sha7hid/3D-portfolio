@@ -1,13 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
 const Section = styled.div`
-height: 100vh;
-scroll-snap-align: center;
-`
+  height: 100vh;
+  scroll-snap-align: center;
+`;
 const Hero = () => {
   return (
-<Section>Hero</Section>
-  )
-}
+    <Section>
+      <Navbar />
+    </Section>
+  );
+};
 
-export default Hero
+export default Hero;
