@@ -17,6 +17,9 @@ const Left = styled.div`
 flex:1;
 display:flex;
 justify-content:flex-end;
+@media only screen and (max-width:768px){
+  justify-content:center;
+ }
 `
 const Title = styled.h1`
 font-weight:100;
@@ -27,6 +30,9 @@ display:flex;
 justify-content:center;
 flex-direction: column;
 gap:10px;
+@media only screen and (max-width:768px){
+  width:200px;
+ }
 `
 const Input = styled.input`
 padding: 15px;
@@ -51,6 +57,9 @@ padding:15px;
 `
 const Right = styled.div`
 flex:1;
+@media only screen and (max-width:768px){
+  display:none;
+ }
 
 `
 
