@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styled from "styled-components";
 const Section = styled.div`
@@ -59,7 +60,7 @@ const Navbar = () => {
    <Section>
     <Container>
     <Links>
-    <Logo src="./img/logo.png"/>
+    <Logo src="/img/logo.png"/>
     <List>
       <ListItem>Home</ListItem>
       <ListItem>Studio</ListItem>
@@ -68,7 +69,7 @@ const Navbar = () => {
     </List>
     </Links>
     <Icons>
-        <Icon src="./img/search.png"/>
+        <Icon src="/img/search.png"/>
         <Button>Hire Now</Button>
     </Icons>
     </Container>

@@ -1,3 +1,4 @@
+'use client'
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
@@ -113,7 +114,7 @@ const Hero = () => {
       <Left>
         <Title>Think. Make. Solve.</Title>
         <WhatWeDo>
-          <Line src="./img/line.png" alt=""/>
+          <Line src="/img/line.png" alt=""/>
        <Subtitle>What We Do</Subtitle>
         </WhatWeDo>
         <Desc>we enjoy creating delightful, human-centered digital experiences.</Desc>
@@ -132,7 +133,7 @@ const Hero = () => {
       
 
     </Canvas>
-        <Img src="./img/astro.png"/>
+        <Img src="/img/astro.png"/>
       </Right>
       </Container>
     </Section>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { OrbitControls, Stage } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'

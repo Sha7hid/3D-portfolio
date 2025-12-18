@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Atom from './Atom'
 import { OrbitControls, Stage } from '@react-three/drei'

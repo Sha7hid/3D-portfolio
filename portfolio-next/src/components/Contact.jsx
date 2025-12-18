@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components'
@@ -65,33 +66,38 @@ flex:1;
 
 const Contact = () => {
   const ref = useRef();
-const [success, setSuccess] = useState(null);
-const handleSubmit =e=>{
-  e.preventDefault();
-  emailjs.sendForm('service_yzw4irp', 'template_3ae6sji', ref.current, 'I6r4uHAVy0XfxT-ky')
-  .then((result) => {
-      console.log(result.text);
-      setSuccess(true)
-  }, (error) => {
-      console.log(error.text);
-      setSuccess(false)
-  });
-}
+  const [success, setSuccess] = useState(null);
+  const handleSubmit = e => {
+    e.preventDefault();
+    emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      ref.current,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    )
+      .then((result) => {
+        console.log(result.text);
+        setSuccess(true)
+      }, (error) => {
+        console.log(error.text);
+        setSuccess(false)
+      });
+  }
   return (
     <Section>
       <Container>
         <Left>
-          <Form ref={ref}onSubmit={handleSubmit}>
+          <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Us</Title>
-            <Input placeholder='Name' name='name'/>
-            <Input placeholder='Email' name='email'/>
-            <TextArea placeholder='Write your message' name='message' rows={10}/>
+            <Input placeholder='Name' name='name' />
+            <Input placeholder='Email' name='email' />
+            <TextArea placeholder='Write your message' name='message' rows={10} />
             <Button type='submit'>Send</Button>
             {success && "Your message has been sent. We'll get back to you soon"}
           </Form>
         </Left>
         <Right>
-          <Map/>
+          <Map />
         </Right>
       </Container>
     </Section>
